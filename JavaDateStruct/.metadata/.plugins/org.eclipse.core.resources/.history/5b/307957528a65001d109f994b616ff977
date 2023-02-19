@@ -1,0 +1,11 @@
+package recursion;
+
+import java.util.Iterator;
+
+//递归解迷宫问题
+public class MiGongProblem {
+	public static void main(String[] args) {
+		int[][] map = new int[8][7];
+		for(int i = 0;i < map[1][].length)
+	}
+}

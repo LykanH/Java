@@ -1,0 +1,9 @@
+package recursion;
+
+
+//递归解迷宫问题
+public class MiGongProblem {
+	public static void main(String[] args) {
+		int[][] map = new int[8][7];
+	}
+}

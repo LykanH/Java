@@ -1,0 +1,20 @@
+package josephu;
+
+public class LoopLinkList {
+	Boy curBoy = null;
+	Boy first = null;
+	public LoopLinkList() {
+		first = new Boy(1);
+		first.setNext(first);
+		curBoy = first;
+	}
+	public void addNode(Boy boy) {
+		curBoy.setNext(boy);
+		boy.setNext(first);
+		curBoy = curBoy.getNext();
+	}
+	
+	public void list() {
+		
+	}
+}

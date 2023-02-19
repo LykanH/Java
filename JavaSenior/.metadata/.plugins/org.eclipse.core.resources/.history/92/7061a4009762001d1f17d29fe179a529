@@ -1,0 +1,14 @@
+package josephu;
+
+public class Josephu {
+
+	public static void main(String[] args) {
+		LoopLinkList lll = new LoopLinkList();
+		lll.addNode(new Boy(1));
+		lll.addNode(new Boy(2));
+		lll.addNode(new Boy(3));
+		lll.addNode(new Boy(4));
+		lll.list();
+	}
+
+}

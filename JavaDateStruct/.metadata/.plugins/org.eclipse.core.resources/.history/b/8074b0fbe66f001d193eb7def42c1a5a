@@ -1,0 +1,14 @@
+package kmp;
+
+/*
+ * 使用KMP算法实现判断一个字符串是否为长字符串的子字符串。
+ * 如果是返回下标(假设只出现一次)
+ * 如果不是返回 -1
+ */
+
+public class KMPAlgorithm {
+	public static void main(String[] args) {
+		String str1 = "BBC ABCDAB ABCDABCDABDE";
+		String str2 = "ABCDABD";
+	}
+}

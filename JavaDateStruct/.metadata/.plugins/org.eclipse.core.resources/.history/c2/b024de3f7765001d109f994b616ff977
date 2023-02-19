@@ -1,0 +1,10 @@
+package recursion;
+
+/*
+ *递归的基础应用
+ */
+public class Recursion {
+	public static void main(String[] args) {
+		
+	}
+}

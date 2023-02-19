@@ -1,0 +1,23 @@
+package recursion;
+
+/*
+ *递归的基础应用
+ */
+public class Recursion {
+	public static void main(String[] args) {
+		System.out.println(math1(5));
+	}
+	
+	//递归实现阶乘
+	public static int math1(int num) {
+		if (num == 1) {
+			return num;
+		}else {
+			return math1(num-1)*num;
+		}
+	}
+	//递归实现求取最大公约数 即辗转相除法
+	public static int math2(int a,int b) {
+		
+	}
+}

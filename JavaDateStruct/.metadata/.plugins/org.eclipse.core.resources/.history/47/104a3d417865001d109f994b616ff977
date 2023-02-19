@@ -1,0 +1,16 @@
+package recursion;
+
+/*
+ *递归的基础应用
+ */
+public class Recursion {
+	public static void main(String[] args) {
+		
+	}
+	
+	//递归实现阶乘
+	public void math1() {
+		
+	}
+	//递归实现求取最大公约数 即辗转相除法
+}

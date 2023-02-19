@@ -1,0 +1,53 @@
+package recursion;
+
+import java.util.Iterator;
+
+//递归解迷宫问题
+public class MiGongProblem {
+	public static void main(String[] args) {
+		int[][] map = new int[8][7];
+		for(int i = 0;i < map.length;i++) {
+			for(int j = 0;j < map[0].length;j++) {
+				if (i == 0 || j == 0 || i == map.length-1 || j==map[0].length-1) {
+					map[i][j] = 1;
+				}else {
+					map[i][j] = 0;
+				}
+			}
+		}
+		for(int i = 0;i < map.length;i++) {
+			for(int j = 0;j < map[0].length;j++) {
+				System.out.print(map[i][j] + "\t");
+			}
+			System.out.println();
+			System.out.println();
+		}
+	}
+	/**
+	 * 
+	 * @param map 传入的迷宫图
+	 * @param i 从哪个位置开始找
+	 * @param j
+	 * @return 如果找到通路则返回true 没找到返回false
+	 * 
+	 * 约定：当map[i][j] = 0时表示没走过 ，=1 时表示墙 ，=2 时表示通路可以走 ，=3 时表示走过且路不通；
+	 * 		走迷宫时，需要确定一个策略：下->右->上->左
+	 */
+	public static boolean setWay(int[][] map,int i,int j) {
+		if (map[6][5] == 2) {
+			return true;
+		}else {
+			if (map[i][j]==0) {
+				
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
