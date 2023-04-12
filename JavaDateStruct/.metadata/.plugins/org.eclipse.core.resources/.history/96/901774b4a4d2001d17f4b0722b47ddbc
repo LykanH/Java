@@ -1,0 +1,8 @@
+package lanqiao_exe;
+
+enum days{
+}
+public class Main_H {
+	public static void main(String[] args) {
+	}
+}

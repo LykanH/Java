@@ -1,0 +1,8 @@
+package lanqiao_exe;
+//素数
+public class Main_I {
+
+	public static void main(String[] args) {
+		
+	}
+}

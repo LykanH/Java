@@ -1,0 +1,51 @@
+package kmp;
+
+import java.io.BufferedInputStream;
+import java.util.Scanner;
+
+//输入：s = "ADOBECODEBANC", t = "ABC"
+//输出："BANC"
+
+//输入：s = "a", t = "a"
+//输出："a"
+
+//输入: s = "a", t = "aa"
+//输出: ""
+public class Main_11 {
+	
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(new BufferedInputStream(System.in));
+		String s1 = scanner.nextLine();
+		scanner.nextLine();
+		String s2 = scanner.nextLine();
+		minWindow(s1,s2);
+	}
+	
+	static public String minWindow(String s, String t) {
+		String temp;
+		int i, j, k;
+		for (k = t.length(); k <= s.length(); k++) {
+			for (i = 0, j = i + k; j <= s.length(); i++, j++) {
+				temp = s.substring(i, j);
+				if (judge(temp, t)) {
+					return temp;
+				}
+			}
+		}
+		return "";
+
+	}
+
+	static public boolean judge(String s1, String s2) {
+		boolean flag = true;
+		Character c1;
+		// if(s1.length()<s2.length()) return false;
+		for (int i = 0; i < s2.length(); i++) {
+			c1 = s2.charAt(i);
+
+			if (!s1.contains(c1.toString()))
+				flag = false;
+		}
+		return flag;
+	}
+}

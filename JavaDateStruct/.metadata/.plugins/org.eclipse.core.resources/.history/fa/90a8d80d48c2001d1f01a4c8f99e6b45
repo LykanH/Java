@@ -1,0 +1,10 @@
+package kmp;
+
+/**
+ * 实现KMP算法
+ * @author LykanHyper
+ *
+ */
+public class KMP_Alogorithm {
+
+}

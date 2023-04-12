@@ -1,0 +1,41 @@
+package kmp;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main_6 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		PII[] ps = new PII[3];
+		ps[0] = new PII(5, 1);
+		ps[1] = new PII(1, 1);
+		ps[2] = new PII(4, 1);
+		Arrays.sort(ps);
+		scanner.close();
+		System.out.println(Arrays.toString(ps));
+	}
+}
+class PII implements Comparable<PII> {
+	int start;
+	int end;
+	public PII(int start, int end) {
+		super();
+		this.start = start;
+		this.end = end;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "PII [start=" + start + ", end=" + end + "]";
+	}
+
+
+	@Override
+	public int compareTo(PII pii) {
+		// TODO Auto-generated method stub
+		return Integer.compare(start, pii.start);
+	}
+	
+	
+}

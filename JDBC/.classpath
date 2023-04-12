@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="jdbc_01/src"/>
+	<classpathentry kind="lib" path="jdbc_01/lib/mysql-connector-java-8.0.11.jar"/>
+	<classpathentry kind="lib" path="lib/c3p0-0.9.5.5.jar"/>
+	<classpathentry kind="lib" path="lib/commons-dbcp2-2.9.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-pool2-2.11.1.jar"/>
+	<classpathentry kind="lib" path="lib/druid-1.2.8.jar"/>
+	<classpathentry kind="lib" path="lib/mchange-commons-java-0.2.19.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.11.jar"/>
+	<classpathentry kind="output" path="out/production/jdbc_01"/>
+</classpath>

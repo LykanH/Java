@@ -1,0 +1,11 @@
+package josephu;
+
+public class Josephu {
+
+	public static void main(String[] args) {
+		LoopLinkList lll = new LoopLinkList();
+		
+		lll.list();
+	}
+
+}

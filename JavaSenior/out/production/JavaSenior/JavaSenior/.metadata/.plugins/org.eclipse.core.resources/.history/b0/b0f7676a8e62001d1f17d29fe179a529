@@ -1,0 +1,18 @@
+package josephu;
+
+public class Josephu {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+class Boy{
+	private int no;
+	private Boy next;
+	
+	public Boy(int no) {
+		this.no = no;
+	}
+}

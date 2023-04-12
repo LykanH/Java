@@ -1,0 +1,23 @@
+package kmp;
+
+import java.util.Iterator;
+
+/**
+ * 实现KMP算法
+ * @author LykanHyper
+ *
+ */
+public class KMP_Alogorithm {
+	private void maim() {
+		// TODO Auto-generated method stub
+		
+
+	}
+	public void nextCreat(String s2) {
+		char[] charArray = s2.toCharArray();
+		int[] next = new int[s2.length()];
+		for(int i = 0 ;i < j;i++) {
+			
+		}
+	}
+}

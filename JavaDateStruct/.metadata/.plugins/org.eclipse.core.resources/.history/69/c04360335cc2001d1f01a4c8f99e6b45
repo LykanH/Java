@@ -1,0 +1,10 @@
+package kmp;
+
+import java.util.Queue;
+
+public class Stack_Queue {
+	public static void main(String[] args) {
+		Queue<E> queue = new Queue<E>() {
+		};
+	}
+}

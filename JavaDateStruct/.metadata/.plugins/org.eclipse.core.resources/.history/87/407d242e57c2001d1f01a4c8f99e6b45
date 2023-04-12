@@ -1,0 +1,46 @@
+package kmp;
+
+import java.util.Arrays;
+import java.util.Iterator;
+
+/**
+ * 实现KMP算法
+ * @author LykanHyper
+ *
+ */
+public class KMP_Alogorithm {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s1 = "aabaabaafa";
+		String s2 = "aabaaf";
+		char[] c1 = s1.toCharArray();
+		char[] c2 = s2.toCharArray();
+		int[] nextCreat = new KMP_Alogorithm().nextCreat(s2);
+		int j = 0;
+		for(int i = 0; i < s1.length();i++ ) {
+			while (j > 0 && c1[i] != c2[j]) {
+				j = nextCreat[j];
+			}
+			if (c1[i] == c2[j]) {
+				
+			}
+		}
+	}
+	public int[] nextCreat(String s2) {
+		char[] charArray = s2.toCharArray();
+		int[] next = new int[s2.length()];
+		//j为前缀末尾位置，i为后缀末尾位置
+		int j = 0;
+		next[0] = 0;
+		for(int i = 1;i < next.length;i++) {
+			while(j > 0 && charArray[i] != charArray[j]) {
+				j = next[j-1];
+			}
+			if (charArray[i] == charArray[j]) {
+				j++;
+				next[i] = j;
+			}
+		}
+		return next;
+	}
+}

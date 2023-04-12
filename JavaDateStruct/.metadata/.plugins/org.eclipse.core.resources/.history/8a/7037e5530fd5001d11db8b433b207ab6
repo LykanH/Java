@@ -1,0 +1,117 @@
+package lq_2022;
+
+import java.io.BufferedInputStream;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+import javax.naming.spi.DirStateFactory.Result;
+
+/**
+ * 你有一张某海域 N×N 像素的照片，”.”表示海洋、”#”表示陆地，如下所示：
+ * 
+ * .......
+ * 
+ * .##....
+ * 
+ * .##....
+ * 
+ * ....##.
+ * 
+ * ..####.
+ * 
+ * ...###.
+ * 
+ * .......
+ * 
+ * 其中”上下左右”四个方向上连在一起的一片陆地组成一座岛屿，例如上图就有 2 座岛屿。
+ * 
+ * 由于全球变暖导致了海面上升，科学家预测未来几十年，岛屿边缘一个像素的范围会被海水淹没。
+ * 
+ * 具体来说如果一块陆地像素与海洋相邻(上下左右四个相邻像素中有海洋)，它就会被淹没。
+ * 
+ * 例如上图中的海域未来会变成如下样子：
+ * 
+ * ....... ....... ....... ....... ....#.. ....... .......
+ * 请你计算：依照科学家的预测，照片中有多少岛屿会被完全淹没。
+ * 
+ * 输入格式 第一行包含一个整数N。
+ * 
+ * 以下 N 行 N 列，包含一个由字符”#”和”.”构成的 N×N 字符矩阵，代表一张海域照片，”#”表示陆地，”.”表示海洋。
+ * 
+ * 照片保证第 1 行、第 1 列、第 N 行、第 N 列的像素都是海洋。
+ * 
+ * 输出格式 一个整数表示答案
+ * 
+ * @author LykanHyper
+ *
+ */
+public class Main_7 {
+	static final int N = 1010;
+	static int result = 0;
+	static int num;
+	static char[][] map = new char[N][N];
+	static boolean[][] bool = new boolean[N][N];
+	static int[] dx = new int[] { -1, 0, 1, 0 };
+	static int[] dy = new int[] { 0, 1, 0, -1 };
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(new BufferedInputStream(System.in));
+		num = scanner.nextInt();
+		for (int i = 0; i < num; i++) {
+			map[i] = scanner.next().toCharArray();
+		}
+
+		for (int i = 0; i < num; i++) {
+			for (int j = 0; j < num; j++) {
+				if (map[i][j] == '#' && !bool[i][j]) {
+					if(bfs(i, j)) result++;
+				}
+			}
+		}
+		System.out.println(result);
+	}
+
+	private static boolean bfs(int i, int j) {
+		Queue<Pii> queue = new LinkedList<Pii>();
+		queue.offer(new Pii(i, j));
+		
+		boolean isbound = false;
+		int total = 0,bound = 0;
+		bool[i][j] = true;//表示已经枚举过
+		while(queue.size()!=0) {
+			Pii poll = queue.poll();
+			total++;
+			for(int m=0;m<4;m++) {
+				int a = poll.x+dx[m];
+				int b = poll.y+dy[m];
+				if(a<0&&a>num&&b<0&&b>num) continue;
+				if(bool[a][b]) continue;
+				if(map[a][b]=='.') {
+					isbound=true;
+					continue;
+				}
+				queue.offer(new Pii(a, b));
+				bool[a][b] = true;
+			}
+			if (isbound) {
+				bound++;
+			}
+		}
+		return total==bound;
+	}
+}
+
+class Pii {
+	int x;
+	int y;
+
+	public Pii(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
+
+}

@@ -1,0 +1,11 @@
+import java.io.BufferedInputStream;
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(new BufferedInputStream(System.in));
+		int N = scanner.nextInt();
+		char[] chars = scanner.nextLine().toCharArray();
+		System.out.println(chars);
+	}
+}

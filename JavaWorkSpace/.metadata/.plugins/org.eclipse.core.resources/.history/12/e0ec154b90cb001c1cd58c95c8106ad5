@@ -1,0 +1,30 @@
+package com.guigu.obj;
+
+public class studentText {
+	public static void main(String[] args) {
+		
+//		Student stu1 = new Student();
+//		Student stu1 = new Student();
+//		Student stu1 = new Student();
+//		Student stu1 = new Student();
+//		Student stu1 = new Student();
+		
+		Students[] stu = new Students[20];
+		for(int i = 0;i < stu.length;i++) {
+			stu[i] = new Students();
+			stu[i].number = ((int)i+1);
+			stu[i].state = (int)(Math.random() * 6 + 1);
+			stu[i].score = (int)(Math.random() * 100 + 1);
+		}
+		
+	}
+}
+
+
+class Students {
+	
+	int number;
+	int state;
+	int score;
+	
+}

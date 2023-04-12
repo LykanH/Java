@@ -1,0 +1,36 @@
+package com.guigu.obj;
+
+import java.util.Scanner;
+
+public class rectangleText {
+	public static void main(String[] args) {
+		rectangle rect1 = new rectangle();
+		Scanner scan = new Scanner(System.in);
+		int width = scan.nextInt();
+		int height = scan.nextInt();
+		rect1.rectWidth = 8;
+		rect1.rectHeight = 10;
+		rect1.len1();
+		int area = rect1.area();
+		System.out.println(area);
+	}
+}
+
+class rectangle {
+	int rectWidth;
+	int rectHeight;
+
+	public void len1() {
+		for (int i = 0; i < rectHeight; i++) {
+			for (int j = 0; j < rectWidth; j++) {
+				System.out.print("*");
+
+			}
+			System.out.println();
+		}
+	}
+
+	public int area() {
+		return (rectHeight * rectWidth);
+	}
+}

@@ -1,0 +1,15 @@
+package com.guigu.obj;
+
+public class rectangleText {
+
+}
+
+class rectangle{
+	int rectWidth;
+	int rectHeight;
+	for(int i = 0;i < rectWidth;i++) {
+		for(int j = 0;j < rectHeight;j++) {
+			System.out.println("*");
+		}
+	}
+}

@@ -1,0 +1,25 @@
+package exceptiontest;
+
+import java.util.Scanner;
+
+public class ecmDef {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		double[] arg = new double[2];
+		System.out.println("请输入被除数");
+		arg[0] = scan.nextDouble();
+		System.out.println("请输入除数");
+		arg[1] = scan.nextDouble();
+		
+		ecmDef Test1 = new ecmDef();
+		double resulat = Test1.ecm(arg[0],arg[1]);
+		
+	}
+	
+	public double ecm(double a,double b) {
+		
+		return a/b;
+		
+	}
+}
+

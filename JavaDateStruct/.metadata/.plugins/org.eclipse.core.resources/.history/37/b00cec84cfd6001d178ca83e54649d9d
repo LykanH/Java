@@ -1,0 +1,29 @@
+package kmp;
+
+import java.util.Arrays;
+
+public class Test {
+	public static void main(String[] args) {
+		sub("ADOBECODEBANC", "ABC")
+	}
+	
+	static public String sub(String s,String t) {
+		String temp;
+        int i,j,k;
+        for(k=1;k<s.length()-1;k++){
+            for(i=0,j=i+k;j<=s.length();i++,j++){
+                temp = s.substring(i,j);
+                System.out.println(temp);
+                if(temp.contains(t)){
+                    return temp;
+                }
+            }
+        }
+        return "";
+	}
+		
+		
+	}
+	
+	
+}

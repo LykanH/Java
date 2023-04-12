@@ -1,0 +1,39 @@
+package service;
+
+import domain.Employee;
+
+public class NameListService {
+	private Employee[] employees;
+
+	public NameListService() {
+		super();
+
+		employees = new Employee[Data.EMPLOYEES.length];
+		for (int i = 0; i < Data.EMPLOYEES.length; i++) {
+			int data = Integer.parseInt(Data.EMPLOYEES[i][0]);
+
+			int id = Integer.parseInt(Data.EMPLOYEES[i][1]);
+			String name = Data.EMPLOYEES[i][2];
+			int age = Integer.parseInt(Data.EMPLOYEES[i][3]);
+			double salary = Double.parseDouble(Data.EMPLOYEES[i][4]);
+
+			switch (data) {
+			case Data.EMPLOYEE: {
+				
+				employees[i] = new Employee(id, name, age, salary);
+				break;
+			}
+
+			}
+		}
+	}
+
+	public Employee[] getAllEmployees() {
+		return null;
+
+	}
+
+	public Employee getEmployee(int id) {
+		return null;
+	}
+}

@@ -1,0 +1,19 @@
+package exceptiontest;
+/*
+ * try-catch-finally 模型
+ */
+
+import org.junit.Test;
+
+public class ExceptionTest1 {
+	@Test
+	public void Test1() {
+		String[] str = new String[3] {'a','b','c'};
+//		String str = 'abc';
+		
+		
+		
+	}
+	
+	
+}

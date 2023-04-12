@@ -1,0 +1,26 @@
+package lq_2022;
+
+public class Main6 {
+	static int[] dp =  new int[2030];//用于存放第1到i的最短路径长度
+	public static void main(String[] args) {
+		dp[1]=0;//起始位置
+		
+		int min = Integer.MIN_VALUE;
+		for(int i = 2;i<=2021;i++) {
+			
+		}
+	}
+	
+	//求最大公约数
+	static public int gcd(int a,int b) {
+		if (a%b==0) {
+			return b;
+		}
+		return gcd(b,a%b);
+	}
+	
+	//最大公倍数
+	static public int bs(int a ,int b) {
+		return (a*b) / gcd(a, b);
+	}
+}

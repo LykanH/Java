@@ -1,0 +1,11 @@
+package josephu;
+
+public class LoopLinkList {
+	public LoopLinkList() {
+		Boy first = new Boy(1);
+		first.setNext(first);
+	}
+	public void addNode(Boy boy) {
+		
+	}
+}

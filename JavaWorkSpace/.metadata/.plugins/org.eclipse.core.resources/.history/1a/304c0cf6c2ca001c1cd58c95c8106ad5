@@ -1,0 +1,31 @@
+package com.guigu.obj;
+
+public class rectangleText {
+	public static void main(String[] args) {
+		rectangle rect1 = new rectangle();
+		rect1.rectWidth = 8;
+		rect1.rectHeight = 10;
+		rect1.len1();
+		int area = rect1.area();
+		System.out.println(area);
+	}
+}
+
+class rectangle {
+	int rectWidth;
+	int rectHeight;
+
+	public void len1() {
+		for (int i = 0; i < rectHeight; i++) {
+			for (int j = 0; j < rectWidth; j++) {
+				System.out.print("*");
+
+			}
+			System.out.println();
+		}
+	}
+
+	public int area() {
+		return (rectHeight * rectWidth);
+	}
+}

@@ -1,0 +1,39 @@
+package lanqiao_exe;
+
+import java.util.Scanner;
+
+/**
+ * 大家都知道 Fibonacci 数列吧，f1=1,f2=1,f3=2,f4=3,…,fn=fn−1+fn−2 。
+ * 
+ * 现在问题很简单，输入 n 和 m ，求 fn 的前 n 项和 Snmodm 。
+ * 
+ * 输入格式 共一行，包含两个整数 n 和 m 。
+ * 
+ * 输出格式 输出前 n 项和 Snmodm 的值。
+ * 
+ * 数据范围 1≤n≤2000000000 , 1≤m≤1000000010 输入样例： 5 1000 输出样例： 12
+ * 
+ * @author LykanHyper
+ *
+ */
+enum days {
+}
+
+public class Main_H {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int num = scanner.nextInt();
+		int m = scanner.nextInt();
+		fei(num, m);
+		scanner.close();
+	}
+	public static int fei(int num,int m) {
+		int fa=1,fb=1,sum;
+		for(int i=3;i<=num;i++) {
+			sum = fa+fb;
+			fa=fb;
+			fb=sum%m;
+		}
+		return fb;
+	}
+}

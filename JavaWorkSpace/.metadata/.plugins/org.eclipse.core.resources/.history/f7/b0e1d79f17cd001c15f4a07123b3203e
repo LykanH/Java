@@ -1,0 +1,19 @@
+package com.guigu.java;
+
+public class PrintPerson {
+
+}
+
+class Person{
+	private int ages;
+	
+	public void setAge(int a) {
+		if(a > 0 && a < 130) {
+			ages = a;
+			
+		}else {
+			ages = 0;
+		}
+	}
+	
+}

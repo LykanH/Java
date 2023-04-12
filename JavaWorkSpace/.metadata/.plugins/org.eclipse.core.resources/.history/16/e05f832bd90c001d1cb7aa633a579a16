@@ -1,0 +1,14 @@
+package exceptiontest;
+
+import java.util.Scanner;
+
+public class ecmDef {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int[] arg = new int[1];
+		System.out.println("请输入被除数");
+		arg[0] = scan.nextInt();
+		System.out.println("请输入除数");
+		
+	}
+}

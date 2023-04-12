@@ -1,0 +1,26 @@
+package com.guigu.java;
+
+public class PrintPerson {
+	public static void main(String[] args) {
+		Person b = new Person();
+		b.setAge(180);
+		System.err.println(b.getAge());
+	}
+}
+
+class Person{
+	private int ages;
+	
+	public void setAge(int a) {
+		if(a > 0 && a < 130) {
+			ages = a;
+			
+		}else {
+			ages = 0;
+		}
+	}
+	public int getAge() {
+		return ages;
+	}
+	
+}

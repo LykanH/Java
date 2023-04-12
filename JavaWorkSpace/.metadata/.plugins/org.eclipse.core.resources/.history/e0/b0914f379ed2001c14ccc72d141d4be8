@@ -1,0 +1,12 @@
+package com.muchen.extends_2;
+
+public class KidsText {
+	public static void main(String[] args) {
+		Kids people = new Kids();
+		people.setSex(0);
+		people.setSalary(1000);
+		people.manOrWoman();
+		people.employeed();
+		people.printAge();
+	}
+}

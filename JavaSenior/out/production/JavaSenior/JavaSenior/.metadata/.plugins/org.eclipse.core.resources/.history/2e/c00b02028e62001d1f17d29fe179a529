@@ -1,0 +1,13 @@
+package josephu;
+
+public class Josephu {
+
+	public static void main(String[] args) {
+		
+	}
+
+}
+
+class boy{
+	
+}

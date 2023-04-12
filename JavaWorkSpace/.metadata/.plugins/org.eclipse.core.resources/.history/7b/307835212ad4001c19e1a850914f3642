@@ -1,0 +1,7 @@
+package com.muchen.extends_3;
+
+public class CheckAccountText {
+	public static void main(String[] args) {
+		CheckAccount acc2 = new CheckAccount(1122, 20000, 0.045, 5000);
+	}
+}

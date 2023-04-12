@@ -1,0 +1,14 @@
+package com.muchen.extends_2;
+
+public class ManKind {
+	private int sex;
+	private int salary;
+	
+	public void manOrWoman() {
+		if(sex == 1) {
+			System.out.println("man");
+		}else(sex == 0){
+			System.out.println("woman");
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<c3p0-config>
+
+    <!-- This app is massive! -->
+    <named-config name="hellc3p0">
+<!--        提供获取连接的四个基本信息-->
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/bjpowernode?serverTimezone=GMT%2B8&amp;rewriteBatchedStatements=true</property>
+        <property name="user">root</property>
+        <property name="password">123456</property>
+
+<!--        进行数据库连接池管理的基本信息-->
+<!--        当数据库连接池中连接数不够时，c3p0一次性将数据库服务器申请的连接数-->
+        <property name="acquireIncrement">5</property>
+<!--        c3p0数据库连接池初始化时连接数-->
+        <property name="initialPoolSize">10</property>
+<!--        c3p0数据库连接池维护最少连接数-->
+        <property name="minPoolSize">10</property>
+<!--        c3p0数据库连接池维护最多连接数-->
+        <property name="maxPoolSize">100</property>
+<!--        c3p0数据库连接池最多维护的Statement的个数-->
+        <property name="maxStatements">50</property>
+<!--        每个连接中最多可以使用的statement连接个数-->
+        <property name="maxStatementsPerConnection">2</property>
+
+    </named-config>
+</c3p0-config>

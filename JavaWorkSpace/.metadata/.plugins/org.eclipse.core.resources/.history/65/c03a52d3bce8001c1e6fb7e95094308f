@@ -1,0 +1,36 @@
+package exceptiontest;
+
+import org.junit.Test;
+
+/*
+ * 异常体系结构
+ * 
+ * java.lang.Trowble
+ * 		>java.lang.error:一般不编写针对性的代码进行处理
+ * 		>java.lang.Exception:可以进行一场的处理
+ * 				>编译时异常(checked)(受检异常)
+ * 					IOException
+ * 						FileNotFoundException
+ * 					ClassNotFoundException
+ * 				>运行时异常(unchecked)
+ * 					NullPointerException(空指针异常)
+ * 					ArrayIndexOutOfBoundsException(数组越界异常)
+ * 					ClassCastException()
+ * 					NumberFormatException()
+ * 					InputMismatchException()
+ * 					ArithmeticException()
+ */
+public class ExceptionTest {
+	@Test
+	public void test1() {
+		String[] str = new String[] {"a","b"};
+		str = null;
+//		int[] arr = new int[] {1,2,3};
+		System.out.println(str[1]);
+	}
+	@Test
+	public void test2() {
+		int[] a = new int[3];
+		System.out.println(a[3]);
+	}
+}

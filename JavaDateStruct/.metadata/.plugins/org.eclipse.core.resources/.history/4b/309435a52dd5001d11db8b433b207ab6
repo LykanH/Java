@@ -1,0 +1,57 @@
+package lq_2022;
+
+import java.util.Scanner;
+
+/**
+ * 试题 E: 求阶乘 时间限制: 1.0s 内存限制: 512.0MB 本题总分：15 分
+ * 
+ * 【问题描述】
+ * 
+ * 满足 N! 的末尾恰好有 K 个 0 的最小的 N 是多少?
+ * 
+ * 如果这样的 N 不存在输出 −1。
+ * 
+ * 【输入格式】
+ * 
+ * 一个整数 K。
+ * 
+ * 【输出格式】
+ * 
+ * 一个整数代表答案。
+ * 
+ * 【样例输入】
+ * 
+ * 2
+ * 
+ * 【样例输出】
+ * 
+ * 10
+ * 
+ * @author LykanHyper
+ *
+ */
+//二分法求阶乘
+public class Main_5 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int K = scanner.nextInt();
+		long l = 5, r = 5 * K;
+		while(l<r) {
+			long mid = l+r>>1;
+			if(check(mid)) r=mid;
+			else l=mid+1;
+		}
+	}
+
+	private static boolean check(long mid) {
+		
+		
+		return false;
+	}
+	
+	public static int get(long mid) {
+		//看一个数中5因子的个数
+		int res = 0;
+		
+	}
+}

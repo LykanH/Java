@@ -1,0 +1,10 @@
+package com.muchen.extends_2;
+
+public class Kids extends ManKind{
+	private int yearsOld;
+	
+	public void printAge() {
+		System.out.println("yearOld:" + yearsOld);
+	}
+	
+}

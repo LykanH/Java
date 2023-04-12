@@ -1,0 +1,6 @@
+package josephu;
+
+public class LoopLinkList {
+	Boy first = new Boy(1);
+
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/Algorithms/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/DataStruct/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/TestDir/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/day02/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/day03/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/day04/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/day05/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/day06/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/day07/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/day08/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/day09/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/day10/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/JavaSenior/tankegame/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="junit4" level="project" />
+  </component>
+</module>

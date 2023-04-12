@@ -1,0 +1,17 @@
+package kmp;
+
+/**
+ * 实现KMP算法
+ * @author LykanHyper
+ *
+ */
+public class KMP_Alogorithm {
+	private void maim() {
+		// TODO Auto-generated method stub
+		
+
+	}
+	public void nextCreat(String s2) {
+		
+	}
+}

@@ -1,0 +1,8 @@
+package lq_2022;
+
+public class Main6 {
+	int[] dp =  new int[2030];
+	public static void main(String[] args) {
+		
+	}
+}

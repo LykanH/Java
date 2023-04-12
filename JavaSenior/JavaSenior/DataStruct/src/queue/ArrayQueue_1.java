@@ -1,0 +1,123 @@
+package queue;
+
+import java.util.Scanner;
+
+/**
+ * @author muchen
+ * @create 2022 - 10 - 2022/10/22 14:30
+ * <p>
+ * 循环队列
+ * 线性结构中队列的代码实现...
+ * 通过数组实现
+ */
+public class ArrayQueue_1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("输入你想创建队列的大小：");
+        int i = scanner.nextInt();
+        Queue queue = new Queue(i);
+
+        while (true) {
+            System.out.println("*****************");
+            System.out.println("输入“1”插入元素\n输入“2”移除元素\n输入“3”显示队列中所有元素\n" +
+                    "输入“4”输出队首元素\n输入“5”输出队列中元素个数:");
+            int a = scanner.nextInt();
+            switch (a) {
+                case 1:
+                    queue.inQueue(5);
+                    break;
+                case 2:
+                    queue.outQueue();
+                    break;
+                case 3:
+                    queue.printQueue();
+                    break;
+                case 4:
+                    queue.printFirstNum();
+                    break;
+                case 5:
+                    System.out.printf("元素个数为：%d", queue.printfNum());
+                    break;
+                default:
+                    System.out.println("输入有误，重新输入！");
+            }
+        }
+    }
+}
+
+class Queue {
+    private int front;      //队列头
+    private int rear;       //队列尾
+    private int maxSize;    //队列最大容量
+    private int[] queue;
+
+    public Queue(int maxSize) {
+        this.maxSize = maxSize;
+        queue = new int[maxSize];
+        front = 0;    //指向队列头部，front是指向队列头部数据
+        rear = 0;      //指向队列尾部的数据的后一个位置
+    }
+
+    public boolean isFull() {
+        //判断队满
+        return (rear + 1) % maxSize == front; //返回true则代表队满
+    }
+
+    public boolean isEmpt() {
+        return front == rear;   //返回true则代表队空
+    }
+
+    public void inQueue(int a) {
+        if (isFull()) {
+            System.out.println("队列已满！");
+            return;
+        }
+        queue[rear] = a;
+        rear = (rear + 1) % maxSize;
+//        rear = rear % (maxSize - 1);
+//        queue[rear++] = a;
+    }
+
+    public int outQueue() {
+        if (isEmpt()) {
+            throw new RuntimeException("队列为空");
+        }
+//        front = (front % (maxSize - 1));
+//        front++;
+//        return queue[front];
+        int value = queue[front];
+        front = (front + 1) % maxSize;          //因为只有rear后边才空一位作为标识，front后并不空格
+        return value;
+    }
+
+    public void printQueue() {
+        //显示队列所有数据
+        if (isEmpt()) {
+            System.out.println("队列为空！");
+            return;
+        }
+        System.out.println("front = " + front + "rear = " + rear);
+        for (int i = front; i < front + printfNum(); i++) {
+            System.out.printf("arr[%d] = %d\t", i % maxSize, queue[i % maxSize]);
+        }
+    }
+
+    public void printFirstNum() {
+        //输出队列中第一个数据
+        if (isEmpt()) {
+            System.out.println("队列为空！");
+            return;
+        }
+        System.out.println("第一个元素：" + queue[front]);
+    }
+
+    public int printfNum() {
+        //输出队列中有多少个元素
+//        if (isEmpt()) {
+//            System.out.println("队列为空");
+//            return;
+//        }
+//        System.out.println("队列中元素个数为：" + (rear + maxSize - front) % maxSize);
+        return (rear + maxSize - front) % maxSize;
+    }
+}

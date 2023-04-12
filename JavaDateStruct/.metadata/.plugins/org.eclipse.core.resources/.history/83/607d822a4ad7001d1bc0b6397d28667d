@@ -1,0 +1,21 @@
+package lanqiao_exe;
+
+import java.util.ArrayList;
+
+//素数
+public class Main_I {
+	static ArrayList<Integer> tempArrayList = new ArrayList<Integer>();
+	public static void main(String[] args) {
+		int i;
+		boolean flag = true;
+		for(i=0;i <= 100;i++) {
+			if(i<2) continue;
+			for(int j=2;j<i/j;j++) {
+				if (i%j!=0) {
+					flag = false;
+				}
+			}
+			if(flag) tempArrayList.add(i);
+		}
+	}
+}

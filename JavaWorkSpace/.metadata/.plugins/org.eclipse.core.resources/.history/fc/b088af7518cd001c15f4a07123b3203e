@@ -1,0 +1,30 @@
+package com.guigu.java;
+
+import javax.management.RuntimeErrorException;
+
+public class PrintPerson {
+	public static void main(String[] args) {
+		Person b = new Person();
+		b.setAge(180);
+		System.err.println("年龄为：" + b.getAge());
+	}
+}
+
+class Person{
+	private int ages;
+	
+	public void setAge(int a) {
+		if(a > 0 && a < 130) {
+			ages = a;
+			
+		}else {
+//			ages = 0;
+//			System.out.println("传入的数据不合法！");
+			throw new RuntimeErrorException("传入的数据不合法！")
+		}
+	}
+	public int getAge() {
+		return ages;
+	}
+	
+}

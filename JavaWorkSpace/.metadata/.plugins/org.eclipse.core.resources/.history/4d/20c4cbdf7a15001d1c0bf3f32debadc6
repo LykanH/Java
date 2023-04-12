@@ -1,0 +1,66 @@
+package service;
+
+import domain.Employee;
+import domain.Equipment;
+import domain.Programmer;
+
+public class NameListService {
+	private Employee[] employees;
+	
+	public NameListService() {
+		super();
+//		1、根据项目提供的Data类构建相应大小的employees数组
+//		2、再根据Data类中的数据构建不同的对象，包括Employee、Programmer、Designer
+//		和Architect对象，以及相关联的Equipment子类的对象
+//		3、将对象存于数组中
+
+		employees = new Employee[Data.EMPLOYEES.length];
+		for (int i = 0; i < Data.EMPLOYEES.length; i++) {
+			int data = Integer.parseInt(Data.EMPLOYEES[i][0]);
+
+			int id = Integer.parseInt(Data.EMPLOYEES[i][1]);
+			String name = Data.EMPLOYEES[i][2];
+			int age = Integer.parseInt(Data.EMPLOYEES[i][3]);
+			double salary = Double.parseDouble(Data.EMPLOYEES[i][4]);
+			Equipment equipment;
+			switch (data) {
+			case Data.EMPLOYEE: {
+				
+				employees[i] = new Employee(id, name, age, salary);
+				break;
+			}case Data.PROGRAMMER:{
+				equipment = getEquipment(i);
+				employees[i] = new Programmer(id, name, age, salary, equipment);
+				break;
+			}
+
+			}
+		}
+	}
+	
+	/**
+	 * 
+	 * @Description 获得指定index上的员工设备
+	 * @author muchen
+	 * @date 2022年8月6日下午7:23:04
+	 * @param i
+	 * @return
+	 */
+	
+	private Equipment getEquipment(int index) {
+		// TODO Auto-generated method stub
+		for(int i = 0;i < Data.EMPLOYEES.length)
+		return null;
+	}
+
+
+
+	public Employee[] getAllEmployees() {
+		return null;
+
+	}
+
+	public Employee getEmployee(int id) {
+		return null;
+	}
+}

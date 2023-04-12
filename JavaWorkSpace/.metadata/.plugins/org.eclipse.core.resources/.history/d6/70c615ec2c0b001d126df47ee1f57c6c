@@ -1,0 +1,41 @@
+package exceptiontest;
+/*
+ * try-catch-finally 模型
+ */
+
+import org.junit.Test;
+
+public class ExceptionTest1 {
+	@Test
+	public void Test1() {
+//		String[] str = new String[] {"a","b","c"};
+		String str = "123";
+//		System.out.println(str[0]);
+		str = "abc";
+		try {
+			int num = Integer.parseInt(str);
+			System.out.println("hello1");	//上一行代码报错 这行代码不执行，直接执行catch
+		}
+		catch (NumberFormatException e) {
+			// TODO: handle exception
+			System.out.println("出现数值转换异常了，请不要急");
+			System.out.println("hello2");
+		}
+		catch (ClassCastException e) {
+			// TODO: handle exception
+			System.out.println("出现类型转换异常了，请不要急");
+			System.out.println("hello3");
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("出现异常了，请不要急");
+		}
+//		finally {
+//			sys
+//		}
+		
+		
+	}
+	
+	
+}
